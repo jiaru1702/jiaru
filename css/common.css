@@ -1,3 +1,7 @@
+body, html {
+  width: 100%;
+  height: 100%; }
+
 .margin {
   width: 1210px;
   margin: 0 auto; }
@@ -24,6 +28,21 @@ header .header-r {
 #menu .search {
   float: right;
   margin-top: 30px; }
+
+#menu .search .search-t {
+  position: relative; }
+
+#tet {
+  position: absolute;
+  top: -8px;
+  right: 26px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  width: 15px;
+  height: 15px;
+  background: url(../img/v1.0.1_icon.png) no-repeat;
+  background-position: 0px -587px; }
 
 #menu .search .search-t .inpId {
   float: left;
@@ -75,39 +94,53 @@ nav .nav-r {
 
 #pass {
   height: 376px;
-  border-top: 2px dashed #ddd;
-  margin-top: 48px; }
+  margin-top: 48px;
+  background: url(../img/product_bg.png) no-repeat center; }
 
 #pass .pass-l {
   float: left;
-  width: 600px;
-  position: relative; }
+  width: 600px; }
 
 #pass .pass-l .pass-l-l {
   float: left;
   width: 250px;
   margin-left: 50px;
-  margin-top: 70px; }
+  margin-top: 100px; }
+
+#pass .pass-l .pass-l-l .aaId {
+  display: block;
+  padding-left: 5px;
+  text-align: center;
+  font: 18px/33px "";
+  color: #fff;
+  width: 170px;
+  height: 33px;
+  background: url(../img/join.png) no-repeat; }
 
 #pass .pass-l .imgId01 {
   float: right;
-  width: 290px; }
-
-#pass .pass-l .imgId03 {
-  position: absolute;
-  right: -47px;
-  top: -44px; }
+  width: 260px;
+  margin: 90px 20px 0 0; }
 
 #pass .pass-r {
   float: right;
-  width: 600px;
-  border-left: 2px dashed #ddd; }
+  width: 600px; }
 
 #pass .pass-r .pass-r-l {
   float: left;
   width: 250px;
   margin-left: 50px;
-  margin-top: 70px; }
+  margin-top: 100px; }
+
+#pass .pass-r .pass-r-l .aaId {
+  display: block;
+  padding-left: 5px;
+  text-align: center;
+  font: 18px/33px "";
+  color: #fff;
+  width: 170px;
+  height: 33px;
+  background: url(../img/join.png) no-repeat; }
 
 #pass b {
   font: 700 0.5 "";
@@ -126,7 +159,8 @@ nav .nav-r {
 
 #pass .pass-r .imgId02 {
   float: right;
-  width: 290px; }
+  width: 260px;
+  margin: 90px 0px 0 0; }
 
 #cook {
   height: 1340px;
@@ -135,38 +169,22 @@ nav .nav-r {
 
 #cook .cook-t {
   height: 72px;
-  background-color: #aceadf;
-  font: 700 36px/72px "";
-  color: #2A2A2A; }
-
-#cook .cook-t1 {
-  height: 72px;
-  background-color: #fd9da9;
-  font: 700 36px/72px "";
-  color: #2A2A2A; }
-
-#cook .cook-t2 {
-  height: 72px;
-  background-color: #fcf46d;
-  font: 700 36px/72px "";
-  color: #2A2A2A; }
-
-#cook .cook-t3 {
-  height: 72px;
-  background-color: #e0d4c6;
-  font: 700 36px/72px "";
-  color: #2A2A2A; }
-
-#cook .cook-t4 {
-  height: 72px;
-  background-color: #efefef;
-  font: 700 36px/72px "";
-  color: #2A2A2A; }
+  width: 100%; }
 
 #cook ul li {
   float: left;
   width: 250px;
   margin: 40px 26px 0 26px; }
+
+#cook ul li .aId {
+  display: block;
+  width: 175px;
+  height: 33px;
+  background: url(../img/join2.png) no-repeat;
+  padding-left: 5px;
+  text-align: center;
+  font: 18px/33px "";
+  color: #98805c; }
 
 #cook ul li s {
   color: red;
@@ -184,6 +202,28 @@ nav .nav-r {
   height: 104px;
   border-left: 1px solid #ccc; }
 
+#friend ul li s {
+  display: block;
+  margin: 0 75px;
+  background: url(../img/v1.0.1_icon.png) no-repeat;
+  width: 54px;
+  height: 54px; }
+
+#friend ul li s.li05 {
+  background-position: -100px -150px; }
+
+#friend ul li s.li06 {
+  background-position: -170px -150px; }
+
+#friend ul li s.li07 {
+  background-position: -240px -150px; }
+
+#friend ul li s.li08 {
+  background-position: -100px -210px; }
+
+#friend ul li s.li09 {
+  background-position: -170px -210px; }
+
 #friend ul li.te {
   border-right: 1px solid #ccc; }
 
@@ -197,3 +237,52 @@ footer {
   color: #666;
   text-align: center;
   padding-bottom: 32px; }
+
+body {
+  position: relative; }
+
+.bod {
+  position: fixed;
+  top: 500px;
+  right: 0;
+  width: 60px;
+  height: 2px; }
+
+.bod ul {
+  border: 1px solid #C7C7C7; }
+
+.bod ul li {
+  display: block;
+  width: 60px;
+  height: 66px;
+  border-bottom: 1px solid #C7C7C7;
+  background: url(../img/v1.0.1_icon.png) no-repeat; }
+
+.bod ul li i {
+  padding-top: 40px;
+  display: block;
+  text-align: center; }
+
+.bod ul li.li01 {
+  background-position: -250px 12px; }
+
+.bod ul li.li02 {
+  background-position: 14px 10px; }
+
+.bod ul li.li03 {
+  background-position: -52px 10px; }
+
+.bod ul li.li04 {
+  background-position: -316px 12px; }
+
+#btn01 {
+  position: fixed;
+  top: 635px;
+  right: 5px;
+  text-align: center;
+  color: #fff;
+  border: none;
+  width: 15px;
+  height: 15px;
+  background: url(../img/v1.0.1_icon.png) no-repeat;
+  background-position: 0px -587px; }
