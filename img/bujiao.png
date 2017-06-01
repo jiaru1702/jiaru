@@ -1,0 +1,487 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>补交货款 -
+        专业的蛋糕速递服务商|蛋糕|蛋糕网|蛋糕快递|蛋糕礼品|蛋糕速递|网上订蛋糕|送蛋糕网站|生日蛋糕|节日蛋糕--专注于蛋糕速递服务十余年,全网销量稳居首位!
+    </title>
+    <meta name="keywords" content="蛋糕,蛋糕网,生日蛋糕,蛋糕商城,蛋糕快递,蛋糕礼品,蛋糕速递,网上订蛋糕,送蛋糕网站,蛋糕预定,生日蛋糕,节日蛋糕,爱情蛋糕">
+    <meta name="description" content="中国最专业的蛋糕速递服务商,专注于蛋糕速递服务十余年,全网销量稳居首位！北京千禧优品提供24小时订蛋糕,网上订蛋糕后最快3小时即可送上门,送蛋糕城市覆盖中国900多城市！">
+    <link rel="shortcut icon" href="http://www.qianxidangao.net/logo.ico">
+    <link href="bujiao_files/order.css" type="text/css" rel="stylesheet">
+    <link href="bujiao_files/octmami_v1.css" type="text/css" rel="stylesheet">
+    <script charset="utf-8" src="bujiao_files/v.htm"></script><script src="bujiao_files/hm.js"></script><script type="text/javascript" src="bujiao_files/jquery-1.js"></script>
+    <script type="text/javascript" src="bujiao_files/jquery.js"></script>
+    <script type="text/javascript">
+        $(function () {
+
+            //提交
+            $("#Button1").click(function () {
+
+                var Order = $("#txtOrder").val().replace(/[ ]/g, "");
+                var regOrder = /^[a-zA-Z0-9][a-zA-Z0-9]{0,19}$/;
+                var bolOrder = regOrder.test(Order);
+                if (!bolOrder) {
+                    alert("请输入订单号");
+                    return false;
+                }
+
+                //手机
+                var Dname = $("#txtDname").val().replace(/[ ]/g, "");
+                var regDname = /^1[3-9][0-9]{9}$/;
+                var bolDname = regDname.test(Dname);
+                if (!bolDname) {
+                    alert("请输入订货人手机");
+                    return false;
+                }
+
+            });
+
+            //提交
+            $("#Button2").click(function () {
+
+                //手机
+                var Dhuo = $("#txtDhuo").val().replace(/[ ]/g, "");
+                var regDhuo = /^1[3-9][0-9]{9}$/;
+                var bolDhuo = regDhuo.test(Dhuo);
+                if (!bolDhuo) {
+                    alert("请输入订货人手机");
+                    return false;
+                }
+
+                //手机
+                var Shou = $("#txtShou").val().replace(/[ ]/g, "");
+                var regShou = /^1[3-9][0-9]{9}$/;
+                var bolShou = regShou.test(Shou);
+                if (!bolShou) {
+                    alert("请输入收货人手机");
+                    return false;
+                }
+
+            });
+        });
+    </script>
+    <script type="text/javascript" src="bujiao_files/index.js"></script>
+    <script type="text/javascript" src="bujiao_files/Cookies.js"></script>
+    <script type="text/javascript">
+        function OrderButton1(e) {
+            var keynum
+            if (window.event) // IE
+            {
+                keynum = e.keyCode
+            }
+            else if (e.which) // Netscape/Firefox/Opera
+            {
+                keynum = e.which
+            }
+            if (keynum == 13) {
+                document.getElementById("Button1").click();
+                return false;
+            }
+        }
+    </script>
+    <script type="text/javascript">
+        function OrderButton2(e) {
+            var keynum
+            if (window.event) // IE
+            {
+                keynum = e.keyCode
+            }
+            else if (e.which) // Netscape/Firefox/Opera
+            {
+                keynum = e.which
+            }
+            if (keynum == 13) {
+                document.getElementById("Button2").click();
+                return false;
+            }
+        }
+    </script>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?31dc1d2d02e4f42e7d1ac4f79020faff";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+</head>
+<body>
+    <form name="form1" method="post" action="order.aspx" id="form1">
+<div>
+<input name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTc1MTQ0NDAzMmRk" type="hidden">
+</div>
+
+<div>
+
+	<input name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="/wEWBwKQ6tHOAgLXhOSsCgKbzs6QBAKM54rGBgLf+96CCwKN8fryAgK7q7GGCA==" type="hidden">
+</div>
+    <!------------------------------------- top 广告 ----------------------------------------->
+    
+<script type="text/javascript" src="bujiao_files/checkmb.js"></script>
+<script type="text/javascript">
+    function logout() {
+
+        if (confirm("您确定要退出吗？")) {
+            top.location.replace("Out.aspx");
+        } else {
+
+            return false;
+        }
+    }
+</script>
+<script type="text/javascript">
+    function query() {
+
+        var word = document.getElementById("txtKey");
+        var value = word.value.replace(" ", "");
+        var url = "Search.aspx?name=" + value;
+        location.href = url;
+
+        return false;
+    }
+</script>
+<script type="text/javascript">
+    function SearchButton1(e) {
+        var keynum
+        if (window.event) // IE
+        {
+            keynum = e.keyCode
+        }
+        else if (e.which) // Netscape/Firefox/Opera
+        {
+            keynum = e.which
+        }
+        if (keynum == 13) {
+            document.getElementById("SearchButton1").click();
+            return false;
+        }
+    }
+</script>
+<div class="top">
+    <div class="web10_center">
+        <div class="left">
+            <span>欢迎来到<a href="http://www.qianxidangao.net/index.aspx">北京千禧优品</a></span>
+        </div>
+        <div class="right">
+            
+            <a href="http://www.qianxidangao.net/Login.aspx" class="login" style="color: #775a48">登陆</a>|&nbsp;&nbsp;<a href="http://www.qianxidangao.net/Regist.aspx">注册</a>
+            
+            <!--login-->
+            <a href="http://www.qianxidangao.net/order.aspx" target="_blank" style="color: #775a48">补交货款</a> <a href="http://www.qianxidangao.net/Query.aspx" target="_blank">订单查询</a>
+            
+            <a href="http://www.qianxidangao.net/peisong.aspx" target="_blank">配送查询</a>
+            
+            <a href="#none" class="top_kefu">客服电话：400-806-1019</a>
+        </div>
+    </div>
+</div>
+<div class="head">
+    <div class="web10_center">
+        <div class="logo" style="margin-top: 19px;">
+            <a href="http://www.qianxidangao.net/index.aspx">
+                <img src="bujiao_files/index_082.jpg"></a>
+        </div>
+        <div class="search">
+            <div class="content">
+                <div class="text">
+                    <input name="txtKey" id="txtKey" onkeypress="return SearchButton1(event);" maxlength="50" autocompleter="associate_autocomplete_goods:name,goods_id" ac_options="{}" class="inputstyle keywords words" type="text">
+                </div>
+                <div class="button">
+                    <a class="btn_search words-search" id="SearchButton1" onclick="return query();" onfocus="this.blur();">
+                        搜索</a></div>
+            </div>
+            <div class="keyword">
+                 <a target="_blank" href="http://www.qianxidangao.net/cakeList.aspx">
+                    蛋糕</a>  <a target="_blank" href="http://www.qianxidangao.net/ToyList.aspx"><b>礼品</b></a>
+            </div>
+        </div>
+        <div class="cat rela">
+            <a target="_blank" href="http://www.qianxidangao.net/ShopCar.aspx">
+                <div class="content">
+                    我的购物车<span>&gt;</span></div>
+            </a>
+            <div class="ico abso" id="fCarts2">2</div>
+        </div>
+    </div>
+</div>
+<div class="newMallNavBar">
+    <div class="nav">
+        <div class="content web10_center rela">
+            
+            <ul class="list">
+            <li class="act"><a href="http://www.qianxidangao.net/index.aspx">首页 </a></li>
+            
+            <li class=""><a href="http://www.qianxidangao.net/CakeList.aspx">蛋糕</a></li>
+<!--<li class=""><a href="FlowerList.aspx">鲜花</a></li>-->
+            <li class=""><a href="http://www.qianxidangao.net/CakeList.aspx?hcid=123">水果蛋糕</a></li>
+<li class=""><a href="http://www.qianxidangao.net/CakeList.aspx?ytid=130">生日蛋糕</a></li>
+<li class=""><a href="http://www.qianxidangao.net/CakeList.aspx?ytid=129">祝寿蛋糕</a></li>
+<li class=""><a href="http://www.qianxidangao.net/CakeList.aspx?ytid=127">儿童蛋糕</a></li>
+            
+            <li class=""><a href="http://www.qianxidangao.net/ToyList.aspx">礼品</a></li>
+            <!--<li><a href="Qixi.aspx">七夕节</a></li>-->
+                <!--<li><a href="Shengdan.aspx">圣诞节</a></li>-->
+                <!--<li><a href="Qingren.aspx">情人节</a></li>-->
+				
+				<li><a href="http://www.qianxidangao.net/Qingren.aspx">女神节</a></li>
+<!--<li><a href="FlowerList.aspx?ytid=&dxid=&hcid=72&ysid=&jgid=&slid=&jrid=&zxid=&hlid=&desc=0" >母亲节</a></li>-->
+        </ul>
+            <script type="text/javascript">
+                //获取文件名称
+                var url = window.location.pathname;
+                while (url.indexOf("/") > -1) {
+                    url = url.substring(url.indexOf("/") + 1, url.length);
+                }
+                var arr = url.toLocaleLowerCase().split(".");
+                var name = arr[0];
+                //alert(name);
+                switch (name) {
+                    case "Index".toLocaleLowerCase():
+                        if (document.getElementById("Index") != null) {
+                            document.getElementById("Index").style.cssText = "background-color: rgb(39, 180, 132);color:#fff;";
+                        }
+                        break;
+                    case "FlowerList".toLocaleLowerCase():
+                    case "FlowerInfo".toLocaleLowerCase():
+                        if (document.getElementById("FlowerList") != null) {
+                            document.getElementById("FlowerList").style.cssText = "background-color: rgb(39, 180, 132);color:#fff;";
+                        }
+                        break;
+                    case "CakeList".toLocaleLowerCase():
+                    case "CakeInfo".toLocaleLowerCase():
+                        if (document.getElementById("CakeList") != null) {
+                            document.getElementById("CakeList").style.cssText = "background-color: rgb(39, 180, 132);color:#fff;";
+                        }
+                        break;
+                    case "ImportList".toLocaleLowerCase():
+                    case "ImportInfo".toLocaleLowerCase():
+                        if (document.getElementById("ImportList") != null) {
+                            document.getElementById("ImportList").style.cssText = "background-color: rgb(39, 180, 132);color:#fff;";
+                        }
+                        break;
+                    case "FreshList".toLocaleLowerCase():
+                    case "FreshInfo".toLocaleLowerCase():
+                        if (document.getElementById("FreshList") != null) {
+                            document.getElementById("FreshList").style.cssText = "background-color: rgb(39, 180, 132);color:#fff;";
+                        }
+                        break;
+                    case "CartoonList".toLocaleLowerCase():
+                    case "CartoonInfo".toLocaleLowerCase():
+                        if (document.getElementById("CartoonList") != null) {
+                            document.getElementById("CartoonList").style.cssText = "background-color: rgb(39, 180, 132);color:#fff;";
+                        }
+                        break;
+                    case "CommercialList".toLocaleLowerCase():
+                    case "CommercialInfo".toLocaleLowerCase():
+                        if (document.getElementById("CommercialList") != null) {
+                            document.getElementById("CommercialList").style.cssText = "background-color: rgb(39, 180, 132);color:#fff;";
+                        }
+                        break;
+                    case "ToyList".toLocaleLowerCase():
+                    case "ToyInfo".toLocaleLowerCase():
+                        if (document.getElementById("ToyList") != null) {
+                            document.getElementById("ToyList").style.cssText = "background-color: rgb(39, 180, 132);color:#fff;";
+                        }
+                        break;
+                    case "RomanceList".toLocaleLowerCase():
+                    case "RomanceInfo".toLocaleLowerCase():
+                        if (document.getElementById("RomanceList") != null) {
+                            document.getElementById("RomanceList").style.cssText = "background-color: rgb(39, 180, 132);color:#fff;";
+                        }
+                        break;
+                    default:
+                        //document.getElementById("Index").style.cssText = "background-color: rgb(39, 180, 132);color:#fff;";
+                        break;
+                }
+            </script>
+            <div class="nav_right">
+                客户至上 <span>|</span> 诚信是金
+            </div>
+        </div>
+        <div class="nav_shadow">
+        </div>
+    </div>
+    <div class="function start" id="function">
+        <ul>
+        <li class="f_kefu"><a href="http://tb.53kf.com/webCompany.php?arg=10091055&amp;style=1" target="_blank">在线客服<i></i></a>
+                
+            </li>
+            <li class="f_user"><a href="http://www.qianxidangao.net/orderlist.aspx">会员中心<i></i></a></li>
+            <li class="f_act"><a href="http://www.qianxidangao.net/shopcar.aspx">购物车<i></i></a><div class="ico abso" id="fCarts1">2</div>
+            </li>
+            
+            
+            <li class="f_top"><a href="#">TOP</a></li>
+        </ul>
+    </div>
+    <script type="text/javascript">
+        //顶部导航下拉
+        jQuery(".all_categories").hover(function () {
+            jQuery(this).find(".categories_content").slideDown(200);
+        }, function () {
+            jQuery(this).find(".categories_content").stop().slideUp(200);
+        });
+        //右侧悬浮按钮
+        jQuery(window).scroll(function () {
+            var y = jQuery(window).scrollTop();
+            if (y < 190) {
+                jQuery("#function").addClass("start");
+            } else {
+                jQuery("#function").removeClass("start");
+            }
+        });
+        //        //客服按钮弹出
+        //        jQuery("#function .f_kefu").hover(function () {
+        //            jQuery(this).find(".kefu_hover").toggle();
+        //        });
+        //        //安排客服
+        //        jQuery.ajax({
+        //            url: "/page/call",
+        //            type: "post",
+        //            dataType: "json",
+        //            success: function (data) {
+        //                var a = jQuery('<a target="_blank"></a>');
+        //                var Pre_lale = '<img border="0" src="http://image.octmami.com/public/pic/web/pic_qqBt_beforeSale_01.jpg" alt="售前咨询" title="售前咨询">';
+        //                var Aftermarket = '<img border="0" src="http://image.octmami.com/public/pic/web/pic_qqBt_afterSale_01.jpg" alt="售后服务" title="售后服务">';
+        //                jQuery('.kefu_hover a').remove();
+        //                jQuery(data.Pre_lale).each(function (i, t) {
+        //                    jQuery('.kefu_hover').append(jQuery(a).clone().attr('href', 'http://wpa.qq.com/msgrd?v=3&uin=' + data.Pre_lale[i] + '&site=qq&menu=yes').append(Pre_lale));
+        //                });
+        //                jQuery(data.Aftermarket).each(function (i, t) {
+        //                    jQuery('.kefu_hover').append(jQuery(a).clone().attr('href', 'http://wpa.qq.com/msgrd?v=3&uin=' + data.Aftermarket[i] + '&site=qq&menu=yes').append(Aftermarket));
+        //                });
+        //            }
+        //        });
+    </script>
+</div>
+<div class="cart-bar clearfix" style="height: 0;">
+</div>
+
+    <!----------------------------------- menu end ----------------------------------------->
+    
+    <!----------------------------------- 广告 end ----------------------------------------->
+    <div class="gongyong">
+        <div class="weizhi">
+            <p>
+                <a href="http://www.qianxidangao.net/Index.aspx">首页</a> &gt; <a href="http://www.qianxidangao.net/Order.aspx">补交货款</a>
+            </p>
+            <div class="clear">
+            </div>
+        </div>
+    </div>
+    <!----------------------------------- weizhi end ----------------------------------------->
+    <div class="gongyong" style="margin-bottom: 20px; background: #FFF;">
+        <div class="peisongleft">
+            
+        </div>
+        <div class="peisongright">
+            <div class="peisongrightbt">
+                <span>补交货款</span>
+            </div>
+            <div class="peisongrightnr">
+                <div class="pdingdanchaxun">
+                    <div class="pdingdanchaxun1">
+                        <h3>
+                            一、请输入订单号、订货人手机查询！</h3>
+                        <div class="pdingdanchaxun1br" onkeypress="return OrderButton1(event);">
+                            <table cellspacing="0" cellpadding="0">
+                                <tbody><tr>
+                                    <td width="35%">
+                                        请填写订单号：
+                                    </td>
+                                    <td width="65%">
+                                        <input name="txtOrder" id="txtOrder" maxlength="50" type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        请输入订货人手机：
+                                    </td>
+                                    <td>
+                                        <input name="txtDname" id="txtDname" maxlength="50" type="text">
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                            <div class="chaxun">
+                                <input name="Button1" value="确定" id="Button1" style="border: none;" type="submit">
+                            </div>
+                        </div>
+                        <p>
+                            说明：本查询为快捷查询系统，不论是否注册用户均可以查询，必须与提交订单时填写方式一致， 有任何疑问请随时与我们联络，24小时服务热线：400-806-1019，谢谢！</p>
+                        <h3>
+                            二、如果您忘记订单号码，请用以下查询！</h3>
+                        <div class="pdingdanchaxun1br" onkeypress="return OrderButton2(event);">
+                            <table cellspacing="0" cellpadding="0">
+                                <tbody><tr>
+                                    <td width="35%">
+                                        输入订货人电话：
+                                    </td>
+                                    <td width="65%">
+                                        <input name="txtDhuo" id="txtDhuo" maxlength="50" type="text">
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        输入收货人电话：
+                                    </td>
+                                    <td>
+                                        <input name="txtShou" id="txtShou" maxlength="50" type="text">
+                                    </td>
+                                </tr>
+                            </tbody></table>
+                            <div class="chaxun">
+                                <input name="Button2" value="确定" id="Button2" style="border: none;" type="submit">
+                            </div>
+                        </div>
+                        <p>
+                            说明：本查询为快捷查询系统，不论是否注册用户均可以查询，双方电话都要输入，必须与提交订单时填写方式一致， 有任何疑问请随时与我们联络，24小时服务热线：400-806-1019，谢谢！</p>
+                        <div class="clear">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="clear">
+        </div>
+    </div>
+    <!----------------------------------- nr end ----------------------------------------->
+    
+    <!----------------------------------- z节日指南 end ----------------------------------------->
+    
+<div class="bottom_label_set">
+    <ul>
+        <li><i class="bottom_label_1"></i><strong>正品保证</strong> </li>
+        <li><i class="bottom_label_2"></i><strong>1小时闪电送达</strong> </li>
+        <li><i class="bottom_label_3"></i><strong>闪电发货</strong> </li>
+        <li><i class="bottom_label_4"></i><strong>金牌服务</strong> </li>
+        <li class="last"><i class="bottom_label_5"></i><strong>口碑信赖</strong> </li>
+    </ul>
+</div>
+<div class="web10_center foot_v12">
+    <div class="bottom_copyright">
+        
+       Copyright © 2005 All rights reserved. | 京ICP备16045607号-1 | 版权所有 千禧蛋糕 千禧优品 
+     <a href="http://www.qianxidangao.net/about.aspx" style="color: #999;" target="_blank">关于我们</a> <a href="http://www.qianxidangao.net/contact.aspx" style="color: #999;" target="_blank">联系我们</a>
+    </div>
+</div>
+<script type="text/javascript">
+    //登录用户
+    //    var value = getCookie("code");
+    //    if (value != "") {
+    //        document.getElementById("fUOrderList").style.display = "";
+    //    } else {
+    //        document.getElementById("fULogin").style.display = "";
+    //    }
+    //购物车数量
+    var carts = getCookie("carts");
+    var count = carts.split('|').length - 1;
+    document.getElementById("fCarts1").innerHTML = count;
+    document.getElementById("fCarts2").innerHTML = count;
+</script>
+
+    <!----------------------------------- foot end ----------------------------------------->
+    </form>
+
+
+</body></html>
