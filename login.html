@@ -105,21 +105,21 @@ $(function(){
 		var reg2=/^\w+@\w+(\.\w+)+$/;
 		var reg3=/^[a-zA-Z_]\w{5,14}$/;
 		var reg4=/^[a-zA-Z0-9]\w{5,19}$/;
-		var str=$("#tet01").val;
+		var str=$("#tet01").val();
 		if(reg1.test(str)||reg2.test(str)||reg3.test(str)){
 			$(".pId1").css("display","none");
-			$("#atet01").css("border","1px solid #ddd");
-		}/*else{
+			$("#tet01").css("border","1px solid #ddd");
+		}else{
 			$(".pId1").css("display","block");
-			$("#atet01").css("border","1px solid #f10180");
-		}*/
-		if(reg4.test($("#tet02").val)){
+			$("#tet01").css("border","1px solid #f10180");
+		}
+		if(reg4.test($("#tet02").val())){
 			$(".pId2").css("display","none");
-			$("#atet02").css("border","1px solid #ddd");
-		}/*else{
+			$("#tet02").css("border","1px solid #ddd");
+		}else{
 			$(".pId2").css("display","block");
-			$("#atet02").css("border","1px solid #f10180");
-		}*/
+			$("#tet02").css("border","1px solid #f10180");
+		}
 	});
 });
 </script>
