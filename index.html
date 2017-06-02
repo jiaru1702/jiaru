@@ -31,7 +31,7 @@
 						<input type="text" id="tet" value="0" />
 					</div>
 					<div class="search-b">
-						<a href="#">蛋糕</a>
+						<a href="passCooke.html">蛋糕</a>
 						<a href="#">礼品</a>
 					</div>
 				</div>
@@ -47,7 +47,7 @@
 						<a href="#" class="aId03">爱情蛋糕</a>
 						<a href="#" class="aId03">艺术蛋糕</a>
 					</div></li>
-					<li><a href="#">蛋糕</a></li>
+					<li><a href="passCooke.html">蛋糕</a></li>
 					<li><a href="#">水果蛋糕</a></li>
 					<li><a href="#">生日蛋糕</a></li>
 					<li><a href="#">祝寿蛋糕</a></li>
@@ -70,14 +70,14 @@
 						<b class="bId">甜蜜一夏</b><br/>
 						<b class="bId">售价<s>238</s>元</b>
 						<p class="pId">清爽如夏<br/>阳光树荫蝉鸣,在夏天里送给你清凉<br/>的祝福，岁月悠长，感动瞬间。</p>
-						<a href="#" class="aaId">立即购买</a>
+						<a href="tm.html" class="aaId">立即购买</a>
 					</div>
 					<a href="tm.html"><img src="img/pp5.jpg" class="imgId01"/></a>
 				</div>
 				<div class="pass-r clear">
 					<div class="pass-r-l">
-						<b class="bId">甜蜜一夏</b><br/>
-						<b class="bId">售价<s>238</s>元</b>
+						<b class="bId">人生电影</b><br/>
+						<b class="bId">售价<s>256</s>元</b>
 						<p class="pId">清爽如夏<br/>阳光树荫蝉鸣,在夏天里送给你清凉<br/>的祝福，岁月悠长，感动瞬间。</p>
 						<a href="#" class="aaId">立即购买</a>
 					</div>
@@ -367,5 +367,19 @@
 						}
 					);
 	index();
+	$(".li04").click(function(){
+		var timeSpace=500;
+		$("body,html").animate({scrollTop:0},timeSpace);
+		
+	});
+	$("#divId01").on("click","a",function(event){
+		let index=$(this).index();
+		var timeSpace=500;
+		$("body,html").animate({scrollTop:((index*1380)+1200)},timeSpace);
+	});
+	
+	
+	
 }
+	
 </script>
