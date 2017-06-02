@@ -109,7 +109,22 @@
 <script type="text/javascript" src="js/login.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
-window.onload = function(){
-	
-}
+$(function(){
+	$(".aId02").click(function(){
+		var reg1=/^1\d{10}$/;
+		var str=$(".num").val();
+		if(str!=""){
+			
+		}else{
+			alert("请输入订单号！");
+		}
+		if(reg1.test($(".num1").val())){
+			
+		}else if($(".num1").val()==""){
+			alert("请输入订货人手机号！");
+		}else{
+			alert("请输入正确的手机号！");
+		}
+	});
+});
 </script>
