@@ -31,7 +31,7 @@
 						<input type="text" id="tet" value="0" />
 					</div>
 					<div class="search-b">
-						<a href="#">蛋糕</a>
+						<a href="passCooke.html">蛋糕</a>
 						<a href="#">礼品</a>
 					</div>
 				</div>
@@ -41,7 +41,7 @@
 			<div class="margin clear">
 				<ul>
 					<li><a href="index.html" class="li11">首页</a></li>
-					<li><a href="#">蛋糕</a></li>
+					<li><a href="passCooke.html">蛋糕</a></li>
 					<li><a href="#">水果蛋糕</a></li>
 					<li><a href="#">生日蛋糕</a></li>
 					<li><a href="#">祝寿蛋糕</a></li>
@@ -86,7 +86,7 @@
 							<option value="">十八英寸（18人份餐具）</option>
 							<option value="">二十英寸（25人份餐具）</option>
 						</select></p>
-						<p class="pId08 clear"><a href="#" class="aId04"></a><a href="#" class="aId05"></a></p>
+						<p class="pId08 clear"><a href="#" class="aId04"></a><i class="aId05" onclick="jia()"></i></p>
 						<p class="pId09 clear"><a href="#" class="aId06">400-806-1019</a><a href="#" class="aId07">在线客服</a></p>
 					</div>
 				</div>
@@ -154,6 +154,7 @@
 	</body>
 </html>
 <script type="text/javascript" src="js/tm.js"></script>
+<script type="text/javascript" src="js/cookieTools1702.js" ></script>
 <script type="text/javascript" src="js/documentId.js"></script>
 <script type="text/javascript">
 		var baseLeft=100;
@@ -188,6 +189,12 @@
 				$("img02").style.left=-1*multiple*left1+"px";
 				$("img02").style.top=-1*multiple*top1+"px";
 		}
+		function jia(){
+			var str=Number($("tet").value);
+			str++;
+			$("tet").value=str;
+			$("btn01").value=$("tet").value;
+		}
 		window.onload=function(){
 			$("boxSmall").onmousemove=function(event){
 				init();
@@ -196,5 +203,6 @@
 				$("mirror").style.display="none";
 				$("main-b-la").style.display="none";
 			}
+			
 		}
 </script>
