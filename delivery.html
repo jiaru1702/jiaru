@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/public.css" />
+		<link rel="stylesheet" href="css/delivery.css" />
+	</head>
+	<body>
+		<header>
+			<div class="margin">
+				<p class="p01">欢迎来到"传递微笑"</p>
+				<div class="header-r clear">
+					<a href="login.html">登录</a><span>|</span>
+					<a href="register.html">注册</a>
+					<a href="money.html">补交货款</a>
+					<a href="order.html">订单查询</a>
+					<a href="delivery.html">配送查询</a>
+					<a href="#">客服电话：400-806-1019</a>
+				</div>
+			</div>
+		</header>
+		<section id="menu">
+			<div class="margin clear">
+				<img src="img/logo2.png" class="menu-c"/>
+				<img src="img/logo.png" class="menu-l"/>
+				<div class="search">
+					<div class="search-t clear">
+						<input type="text" class="inpId" /><input type="button" class="btnId" value="搜索" />
+						<input type="button" class="btnId01" value="我的购物车>" />
+						<input type="text" id="tet" value="0" />
+					</div>
+					<div class="search-b">
+						<a href="#">蛋糕</a>
+						<a href="#">礼品</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<nav>
+			<div class="margin clear">
+				<ul>
+					<li><a href="index.html" class="li11">首页</a></li>
+					<li><a href="#">蛋糕</a></li>
+					<li><a href="#">水果蛋糕</a></li>
+					<li><a href="#">生日蛋糕</a></li>
+					<li><a href="#">祝寿蛋糕</a></li>
+					<li><a href="#">儿童蛋糕</a></li>
+					<li><a href="#">礼品</a></li>
+					<li><a href="#">女神节</a></li>
+				</ul>
+				<div class="nav-r">
+					<i>客户至上</i><span>|</span>
+					<i>诚信是金</i>
+				</div>
+			</div>
+		</nav>
+		<section id="main">
+			<div class="margin">
+				<div class="main-t">
+					<p class="pId01">首页  > 配送区域查询</p>
+				</div>
+				<div class="main-b">
+					<p class="pId02">配送区域查询</p>
+					<div class="main-b-b">
+						<div class="main-b-b-t">
+							<h3>请选择你的省市：</h3>
+							<div class="divId00 clear">
+								<select id="provinceSelect">
+									<option value=""></option>
+								</select>
+								<select id="citySelect">
+									<option value=""></option>
+								</select>
+								<select id="citySelect">
+									<option value=""></option>
+								</select>
+								<select name="">
+									<option value=""></option>
+								</select>
+							</div>
+							<p></p>
+							<p></p>
+							<p></p>
+							<p></p>
+							<p></p>
+							<p></p>
+							<p></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section id="friend">
+			<div class="margin clear">
+				<ul>
+					<li><s class="li05"></s><b>正品保证</b></li>
+					<li><s class="li06"></s><b>1小时闪电送达</b></li>
+					<li><s class="li07"></s><b>闪电发货</b></li>
+					<li><s class="li08"></s><b>金牌服务</b></li>
+					<li class="te"><s class="li09"></s><b>口碑信赖</b></li>
+				</ul>
+			</div>
+		</section>
+		<footer>
+			<p>Copyright &copy; 2005 All rights reserved. | 京ICP备16045607号-1 | 版权所有 传递微笑 关于我们 联系我们</p>
+		</footer>
+		<div class="bod">
+			<ul>
+				<li class="li01"><i>在线客服</i></li>
+				<li class="li02"><i>会员中心</i></li>
+				<li class="li03"><i>购物车</i></li>
+				<li class="li04"><i>TOP</i></li>
+			</ul>
+			<input type="text" id="btn01" value="0"/>
+		</div>
+	</body>
+</html>
+<script type="text/javascript" src="js/delivery.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript">
+	let cityObj={
+    "城市代码": [
+        {
+            "省": "直辖市",
+            "市": [
+					{
+						"市名": "北京市",
+						"县": "101010100"
+					},
+					{
+						"市名": "朝阳",
+						"编码": "101010300"
+					},
+					{
+						"市名": "顺义",
+						"编码": "101010400"
+					}
+				]
+        },
+        {
+            "省": "天津市",
+            "市": [
+                {
+                    "市名": "天津",
+                    "编码": "101030100"
+                },
+                {
+                    "市名": "宝坻",
+                    "编码": "101030300"
+                },
+                {
+                    "市名": "东丽",
+                    "编码": "101030400"
+                }
+              
+            ]
+        },
+        {
+            "省": "上海",
+            "市": [
+                {
+                    "市名": "上海",
+                    "编码": "101020100"
+                },
+                {
+                    "市名": "宝山",
+                    "编码": "101020300"
+                },
+                {
+                    "市名": "嘉定",
+                    "编码": "101020500"
+                }
+            ]
+        },
+		{
+            "省": "陕西省",
+            "市": [
+                {
+                    "市名": "西安",
+                    "编码": "101110101"
+                },
+                {
+                    "市名": "延安",
+                    "编码": "101110300"
+                },
+                {
+                    "市名": "榆林",
+                    "编码": "101110401"
+                }
+            ]
+        }
+    ]
+};
+
+//显示省
+function showProvince(){
+	$("provinceSelect").innerHTML="";
+	for(let i=0;i<cityObj.城市代码.length;i++){
+		let option = $create("option");
+		option.innerHTML = cityObj.城市代码[i].省;
+		option.value = cityObj.城市代码[i].省;
+		$("provinceSelect").appendChild(option);
+	}
+}
+
+//显示城市
+//参数：省
+function showCity(provinceName){
+	$("citySelect").innerHTML="";
+	//1、先在json中查找对应的省
+	let citys = null;
+	for(let i=0;i<cityObj.城市代码.length;i++){
+		if(cityObj.城市代码[i].省==provinceName){
+			citys = cityObj.城市代码[i].市;
+			break; 
+		}
+	}
+	
+	//2、把该省的市循环显示出来	
+	for(let i=0;i<citys.length;i++){
+		let option = $create("option");
+		option.innerHTML = citys[i].市名;		
+		option.value = citys[i].编码;
+		$("citySelect").appendChild(option);		
+	}
+
+}
+
+window.onload = function(){
+	showProvince();
+	showCity($("provinceSelect").value);
+	
+	 $("provinceSelect").onchange = function(){
+		showCity(this.value);
+	 }
+
+}
+</script>
