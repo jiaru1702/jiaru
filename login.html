@@ -61,9 +61,11 @@
 					
 				</div>
 				<div class="main-r">
-					<p>已有账号？请登录<span>未注册？<a href="#" class="aId01">注册</a></span></p>
-					<p>账户：<input type="text" id="tet01" class="tet0" placeholder="邮箱/手机号/用户名" /></p>
-					<p>密码：<input type="text" id="tet02" class="tet0" placeholder="请输入密码" /></p>
+					<p class="pId3">已有账号？请登录<span>未注册？<a href="#" class="aId01">注册</a></span></p>
+					<p class="pId3">账户：<input type="text" id="tet01" class="tet0" placeholder="邮箱/手机号/用户名" /></p>
+					<p class="pId1">请输入正确的邮箱/手机号/用户名，区分大小写</p>
+					<p class="pId3">密码：<input type="text" id="tet02" class="tet0" placeholder="请输入密码" /></p>
+					<p class="pId2">密码为6-20位字母、数字的组合，区分大小写</p>
 					<a href="#" class="aId02"></a>
 				</div>
 			</div>
@@ -96,7 +98,28 @@
 <script type="text/javascript" src="js/login.js"></script>
 <script type="text/javascript" src="js/jquery.js"></script>
 <script type="text/javascript">
-window.onload = function(){
-	
-}
+
+$(function(){
+	$(".aId02").click(function(){
+		var reg1=/^1\d{10}$/;
+		var reg2=/^\w+@\w+(\.\w+)+$/;
+		var reg3=/^[a-zA-Z_]\w{5,14}$/;
+		var reg4=/^[a-zA-Z0-9]\w{5,19}$/;
+		var str=$("#tet01").val;
+		if(reg1.test(str)||reg2.test(str)||reg3.test(str)){
+			$(".pId1").css("display","none");
+			$("#atet01").css("border","1px solid #ddd");
+		}/*else{
+			$(".pId1").css("display","block");
+			$("#atet01").css("border","1px solid #f10180");
+		}*/
+		if(reg4.test($("#tet02").val)){
+			$(".pId2").css("display","none");
+			$("#atet02").css("border","1px solid #ddd");
+		}/*else{
+			$(".pId2").css("display","block");
+			$("#atet02").css("border","1px solid #f10180");
+		}*/
+	});
+});
 </script>
