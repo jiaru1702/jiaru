@@ -66,26 +66,7 @@
 		<section id="pass">
 			<div class="margin clear">
 				<div class="pass-l clear">
-					<div class="pass-l-l">
-						<b>水果森林</b><br/>
-						<b class="bId">售价<s>238</s>元</b>
-						<p class="pId">清爽如夏</p>
-						<p class="pId">	阳光树荫蝉鸣,在夏天里送给你清凉</p>
-						<p class="pId">	的祝福，岁月悠长，感动瞬间。</p>
-						<a href="tm.html" class="aaId">立即购买</a>
-					</div>
-					<a href="tm.html"><img src="img/201411281204138869_63463297.jpg" class="imgId01"/></a>
-				</div>
-				<div class="pass-r clear">
-					<div class="pass-r-l">
-						<b>人生电影</b><br/>
-						<b class="bId">售价<s>256</s>元</b>
-						<p class="pId">清爽如夏</p>
-						<p class="pId">	阳光树荫蝉鸣,在夏天里送给你清凉</p>
-						<p class="pId">	的祝福，岁月悠长，感动瞬间。</p>
-						<a href="#" class="aaId">立即购买</a>
-					</div>
-					<img src="img/cpc2.jpg" class="imgId02"/>
+
 				</div>
 			</div>
 		</section>
@@ -167,6 +148,8 @@
 		</div>
 		<div class="char valign">
 			<div id="kuang">
+				<p class="pId2">欢迎来到“传递微笑”</p>
+				<s id="ding">&times;</s>
 				<div id="duihuakuang"></div><br/>
 				<input id="neirong" type="text"/>
 				<input id="btn0" type="button" value="发送"/>
@@ -179,61 +162,88 @@
 <script type="text/javascript" src="js/cookieTools1702.js" ></script>
 <script type="text/javascript">
 $(function(){
-	
 	var send=getCookie("userName");
-	
 	var send1=getCookie("goodsId");
-	
 	var send2=0; 
-	send2=getCookie("nums");
+	if(getCookie("nums")==""){
+		send2=0
+	}else{
+		send2=getCookie("nums");
+	}
 	$("#tet").val(send2);
 	$("#btn01").val(send2);
 	saveCookie("nums",$("#btn01").val(),1);
 	saveCookie("nums",$("#tet").val(),1);
-	let span="<span style='color:red;'>欢迎 "+send+" 用户</span>";
-	$(".aa01").before(span);
-	$(".aa01").html("返回登录");
-	$(".aa02").html("");
-	/*$(".aa01").click(function(){
-		saveCookie("nums",$("#btn01").val(),-1);
-		saveCookie("nums",$("#tet").val(),-1);
+	if(send!=""){
+		let span="<span style='color:red;'>欢迎 "+send+" 用户</span>";
+		$(".aa01").before(span);
+		$(".aa01").html("返回登录");
+		$(".aa02").html("");
+	}
+	
+	$(".aa01").click(function(){
+		removeCookie("userName");
+		removeCookie("userPass");
+		removeCookie("goodsId");
+		removeCookie("nums");
 		$(".aa01").html("登录");
 		$(".aa02").html("注册");
-	});*/
+		$(".aa01").prev().html("");
+	});
 	var str=0;
 	$.get("getGoodsList.php",function(data){
 			var dd=eval(data);
-			$(".ul01").on("click","li",function(event){
+			
+			$(".pass-l").on("click","div",function(event){
 				let index=$(this).index();
 				saveCookie("goodsId",dd[index].goodsId,1);
-				/*str=$("#tet").val();
-				str++;
-				$("#tet").val(str);
-				$("#btn01").val(str);
-				saveCookie("nums",$("#btn01").val(),7);
-				saveCookie("nums",$("#tet").val(),7);*/
 			});
 			for(var i in dd){
+				if(dd[i].beiyong2=="展示"){
+					var div01="<div class='pass-l-l'><b>"+dd[i].goodsName+"</b><br/><b class='bId'>售价<s>"+dd[i].goodsPrice+"</s>元</b><p class='pId'>"+dd[i].beiyong3+"</p><p class='pId'>"+dd[i].beiyong4+"</p><p class='pId'>"+dd[i].beiyong5+"</p><a href='tm.html' class='aaId'>立即购买</a></div>";
+					$(".pass-l").append(div01);
+					var aa="<a href='tm.html'><img src='img/"+dd[i].goodsImg+"' class='imgId01'/></a>";
+					$(".pass-l").append(aa);
+				}
 				if(dd[i].goodsType=="热销蛋糕"){
 					var stt="<li><img src='img/"+dd[i].goodsImg+"' class='img02' style='width:290px;height:290px;'/><p>"+dd[i].goodsName+"</p><p>"+dd[i].goodsDesc+"<p>售价<s>￥"+dd[i].goodsPrice+"</s>元</p><a href='tm.html' class='aId'>立即购买</a></li>";
 					$("#ulId").append(stt);
-					
+					$("#ulId").on("click","li",function(event){
+						let index=$(this).index();
+						saveCookie("goodsId",dd[index].goodsId,1);
+					});
 				}
 				if(dd[i].goodsType=="生日蛋糕"){
 					var stt="<li><img src='img/"+dd[i].goodsImg+"' class='img02' style='width:290px;height:290px;'/><p>"+dd[i].goodsName+"</p><p>"+dd[i].goodsDesc+"<p>售价<s>￥"+dd[i].goodsPrice+"</s>元</p><a href='tm.html' class='aId'>立即购买</a></li>";
 					$("#ulId01").append(stt);
+					$("#ulId01").on("click","li",function(event){
+						let index=$(this).index();
+						saveCookie("goodsId",dd[index].goodsId,1);
+					});
 				}
 				if(dd[i].goodsType=="祝寿蛋糕"){
 					var stt="<li><img src='img/"+dd[i].goodsImg+"' class='img02' style='width:290px;height:290px;'/><p>"+dd[i].goodsName+"</p><p>"+dd[i].goodsDesc+"<p>售价<s>￥"+dd[i].goodsPrice+"</s>元</p><a href='tm.html' class='aId'>立即购买</a></li>";
 					$("#ulId02").append(stt);
+					$("#ulId02").on("click","li",function(event){
+						let index=$(this).index();
+						saveCookie("goodsId",dd[index].goodsId,1);
+					});
 				}
 				if(dd[i].goodsType=="爱情蛋糕"){
 					var stt="<li><img src='img/"+dd[i].goodsImg+"' class='img02' style='width:290px;height:290px;'/><p>"+dd[i].goodsName+"</p><p>"+dd[i].goodsDesc+"<p>售价<s>￥"+dd[i].goodsPrice+"</s>元</p><a href='tm.html' class='aId'>立即购买</a></li>";
 					$("#ulId03").append(stt);
+					$("#ulId03").on("click","li",function(event){
+						let index=$(this).index();
+						saveCookie("goodsId",dd[index].goodsId,1);
+					});
 				}
 				if(dd[i].goodsType=="艺术蛋糕"){
 					var stt="<li><img src='img/"+dd[i].goodsImg+"' class='img02' style='width:290px;height:270px;'/><p>"+dd[i].goodsName+"</p><p>"+dd[i].goodsDesc+"<p>售价<s>￥"+dd[i].goodsPrice+"</s>元</p><a href='tm.html' class='aId'>立即购买</a></li>";
 					$("#ulId04").append(stt);
+					$("#ulId04").on("click","li",function(event){
+						let index=$(this).index();
+						saveCookie("goodsId",dd[index].goodsId,1);
+					});
 				}
 			}
 		});
@@ -290,7 +300,12 @@ $(function(){
 	$("#btn0").click(function(){
 		fasong();
 	});
-
+	$("#ding").click(function(){
+				$(".char").css("display","none");
+			});
+			$(".li01").click(function(){
+				$(".char").css("display","block");
+			});
 });
 function fasong(){	
 	var p=document.createElement("p");
